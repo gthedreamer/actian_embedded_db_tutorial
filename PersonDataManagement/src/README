@@ -1,0 +1,58 @@
+README - Pervasive Btrieve Samples for C
+
+If you compile and run these programs as a user other than 'psql', 
+the following environment variables need to be set:
+	export LD_LIBRARY_PATH=/usr/local/psql/lib/
+  export LD_LIBRARY_PATH=/usr/local/psql/lib64/  (64-bit OS only)
+	export PVSW_ROOT=/usr/local/psql
+
+
+I. Compile the application(s).
+After ensuring the paths defined in btrsamp.c and loginapi.c are correct, 
+compile the application(s).  
+
+Run "make all" to compile all applications.
+
+For additional make options, type "make".
+
+II. Run the application.
+
+To run type "./btrsamp" or "./loginapi".
+
+
+II. Here is sample output from the executable:
+
+**************** Btrieve C/C++ Interface Demo ****************
+
+Btrieve Versions returned are: 
+   8.50 N
+   8.50 U
+
+Btrieve B_OPEN status (sample.btr) = 0
+Btrieve B_GET_EQUAL status = 0
+
+The retrieved record is:
+ID:      263512477
+Name:    Bruce Theakston
+Street:  2108 Shore Dr
+City:    Baltimore
+State:   MD
+Zip:     21212-2954
+Country: USA
+Phone:   (512)555-2975
+
+Btrieve B_CREATE status = 0
+Btrieve B_OPEN status (sample2.btr) = 0
+Btrieve B_GET_FIRST status (sample.btr) = 0
+
+Btrieve B_GET_NEXT_EXTENDED status = 0
+GetNextExtended returned 20 records.
+Inserted 20 records in new file, status = 0
+
+Btrieve B_GET_NEXT_EXTENDED status = 9
+GetNextExtended returned 13 records.
+Inserted 13 records in new file, status = 0
+
+Btrieve B_CLOSE status (sample.btr) = 0
+Btrieve B_CLOSE status (sample2.btr) = 0
+Btrieve STOP status = 0
